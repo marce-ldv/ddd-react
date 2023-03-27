@@ -1,15 +1,13 @@
 import {useEffect, useState} from "react";
-import { getAllMovies } from "../../../lib/movies/application/getAllMovies";
 import {Movie} from "../../../lib/movies/domain/Movie";
-import {CachedMoviesRepository} from "../../../lib/movies/infrastructure/CachedMoviesRepository";
+import {useMovies} from "../../hooks/useMovies";
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
+  const { getAllMoviesCb } = useMovies();
 
   useEffect(() => {
-    getAllMovies(new CachedMoviesRepository()).then(data => {
-      setMovies(data);
-    })
+    getAllMoviesCb().then((movies) => setMovies(movies));
   }, []);
 
   return (

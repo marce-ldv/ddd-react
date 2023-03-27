@@ -1,7 +1,7 @@
 import {MovieRepository} from "../domain/MovieRepository";
 import {Movie} from "../domain/Movie";
 
-export class CachedMoviesRepository implements MovieRepository {
+export class FakeMoviesRepository implements MovieRepository {
   private movies: Movie[] = [
     new Movie( "1", "The Shawshank Redemption", 1994 ),
     new Movie( "2", "The Godfather", 1972 ),
