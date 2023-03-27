@@ -17,7 +17,7 @@ export class FakeMoviesRepository implements MovieRepository {
     return this.movies.find(movie => movie.getId() === id);
   }
 
-  public all(): Movie[] {
+  public async all(): Promise<Movie[]> {
     return this.movies;
   }
 }

@@ -1,13 +1,9 @@
-import {getAllMovies} from "../../lib/movies/application/getAllMovies";
-import {FakeMoviesRepository} from "../../lib/movies/infrastructure/FakeMoviesRepository";
+import {container} from "tsyringe";
+import {GetAllMovies} from "../../lib/movie/application/getAllMovies";
 
 // controller or presentation layer
 export const useMovies = () => {
-  const moviesRepository = new FakeMoviesRepository();
+  const getAllMovies = container.resolve(GetAllMovies)
 
-  const getAllMoviesCb = () => {
-    return getAllMovies(moviesRepository);
-  }
-
-  return { getAllMoviesCb };
+  return { getAllMovies };
 }

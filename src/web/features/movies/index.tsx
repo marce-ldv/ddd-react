@@ -1,13 +1,13 @@
 import {useEffect, useState} from "react";
-import {Movie} from "../../../lib/movies/domain/Movie";
+import {Movie} from "../../../lib/movie/domain/Movie";
 import {useMovies} from "../../hooks/useMovies";
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
-  const { getAllMoviesCb } = useMovies();
+  const { getAllMovies } = useMovies();
 
   useEffect(() => {
-    getAllMoviesCb().then((movies) => setMovies(movies));
+    getAllMovies.execute().then((movies) => setMovies(movies));
   }, []);
 
   return (
