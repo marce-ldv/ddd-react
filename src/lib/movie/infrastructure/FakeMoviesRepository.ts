@@ -7,6 +7,7 @@ export class FakeMoviesRepository implements MovieRepository {
     new Movie("2", "The Godfather", 1972),
     new Movie("3", "The Godfather: Part II", 1974),
     new Movie("4", "The Dark Knight", 2008),
+    new Movie("5", "The Good, the Bad and the Ugly", 1966),
   ];
 
   public save(movie: Movie): void {
