@@ -11,15 +11,17 @@ const MoviesPage = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <h1>Movies</h1>
-      {movies.map((movie) => (
+      <h2>Movies description</h2>
+      {movies?.map((movie) => (
         <div key={movie.id}>
           <h2>{movie.title}</h2>
           <p>{movie.year}</p>
+          <p>sdaasdsda</p>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
