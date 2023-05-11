@@ -1,3 +1,1 @@
-export const bindMovies = () => {
-
-}
+export const bindMovies = () => {};

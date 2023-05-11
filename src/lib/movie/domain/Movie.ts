@@ -1,6 +1,9 @@
 export class Movie {
-  constructor(readonly id: string, readonly title: string, readonly year: number) {
-  }
+  constructor(
+    readonly id: string,
+    readonly title: string,
+    readonly year: number
+  ) {}
 
   public getId(): string {
     return this.id;

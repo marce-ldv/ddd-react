@@ -1,6 +1,6 @@
-import {useEffect, useState} from "react";
-import {Movie} from "../../../lib/movie/domain/Movie";
-import {useMovies} from "../../hooks/useMovies";
+import { useEffect, useState } from "react";
+import { Movie } from "../../../lib/movie/domain/Movie";
+import { useMovies } from "../../hooks/useMovies";
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
